@@ -1,0 +1,8 @@
+.App {
+  padding-top: 9rem;
+  min-height: 100vh;
+  background-image: url("./Components/assets/img/pikachu_background.jpg");
+  background-attachment: fixed;
+  background-position: 80% -190%;
+}
+
