@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios'
+
 
 import rect_loader from '../pokemon/rect_loader.gif';
 
@@ -45,12 +47,23 @@ export default class PokemonCard extends Component {
         toManyRequests: false
     };
  
-    componentDidMount(){
-        const {name, url} = this.props;  //égal à : const name = this.props.name;
+    async componentDidMount(){
+        const url = this.props.url;  //égal à : const name = this.props.name;
         const pokemonID = url.split("/")[url.split("/").length - 2];
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonID}.png`;
 
-        this.setState({name, imageUrl, pokemonID});
+        this.setState({imageUrl, pokemonID});
+
+        const name = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemonID}/`).then(res => {
+            let name = '';
+            res.data.names.some(language_name => {
+                if(language_name.language.name === 'fr') {
+                    name = language_name.name;
+                    return;
+                }
+            });
+            this.setState({name});
+        });
     }
 
     render() {

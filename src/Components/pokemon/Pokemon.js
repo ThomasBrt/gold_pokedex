@@ -56,7 +56,7 @@ export default class Pokemon extends Component {
 
         //Get les infos
         const pokemonRes = await axios.get(pokemonUrl);
-        const name = pokemonRes.data.name;
+        //const name = pokemonRes.data.name;
         const imageUrl = pokemonRes.data.sprites.front_default;
 
         let {hp, attack, defense, speed, specialAttack, specialDefense} = '';
@@ -115,14 +115,21 @@ export default class Pokemon extends Component {
         //Get pokemon description, catch rate, egggroupes, gender ratio, hatch steps
         await axios.get(pokemonSpeciesUrl).then(res => {
             let description = '';
+            let name = '';
+
             res.data.flavor_text_entries.some(flavor => {
                 if(flavor.language.name === 'fr') {
                     description = flavor.flavor_text;
                     return;
                 }
             });
-
- 
+            res.data.names.some(language_name => {
+                if(language_name.language.name === 'fr') {
+                    name = language_name.name;
+                    return;
+                }
+            });
+           
             const femaleRate = res.data['gender_rate'];
             const genderRatioFemale = 12.5 * femaleRate
             const genderRatioMale = 12.5 * (8 - femaleRate);
@@ -139,6 +146,7 @@ export default class Pokemon extends Component {
             const hatchSteps = 255 * (res.data["hatch_counter"] + 1);
 
             this.setState({
+                name,
                 description,
                 genderRatioFemale,
                 genderRatioMale,
@@ -151,7 +159,6 @@ export default class Pokemon extends Component {
         this.setState({
             imageUrl,
             pokemonID,
-            name,
             types,
             stats:{
                 hp, 
