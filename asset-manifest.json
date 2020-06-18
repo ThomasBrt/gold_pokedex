@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/gold_pokedex/static/css/main.4d844a19.chunk.css",
-    "main.js": "/gold_pokedex/static/js/main.33676b26.chunk.js",
-    "main.js.map": "/gold_pokedex/static/js/main.33676b26.chunk.js.map",
+    "main.js": "/gold_pokedex/static/js/main.5de5f52d.chunk.js",
+    "main.js.map": "/gold_pokedex/static/js/main.5de5f52d.chunk.js.map",
     "runtime-main.js": "/gold_pokedex/static/js/runtime-main.a5d0921c.js",
     "runtime-main.js.map": "/gold_pokedex/static/js/runtime-main.a5d0921c.js.map",
     "static/css/2.af3c1da9.chunk.css": "/gold_pokedex/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6fb0fff3.chunk.js": "/gold_pokedex/static/js/2.6fb0fff3.chunk.js",
-    "static/js/2.6fb0fff3.chunk.js.map": "/gold_pokedex/static/js/2.6fb0fff3.chunk.js.map",
+    "static/js/2.5febbe3e.chunk.js": "/gold_pokedex/static/js/2.5febbe3e.chunk.js",
+    "static/js/2.5febbe3e.chunk.js.map": "/gold_pokedex/static/js/2.5febbe3e.chunk.js.map",
     "index.html": "/gold_pokedex/index.html",
-    "precache-manifest.c0e775763f37d49f7a3d2cfdf01bbb2c.js": "/gold_pokedex/precache-manifest.c0e775763f37d49f7a3d2cfdf01bbb2c.js",
+    "precache-manifest.71f9a8070a090a51122bedc41d610978.js": "/gold_pokedex/precache-manifest.71f9a8070a090a51122bedc41d610978.js",
     "service-worker.js": "/gold_pokedex/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/gold_pokedex/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.4d844a19.chunk.css.map": "/gold_pokedex/static/css/main.4d844a19.chunk.css.map",
-    "static/js/2.6fb0fff3.chunk.js.LICENSE.txt": "/gold_pokedex/static/js/2.6fb0fff3.chunk.js.LICENSE.txt",
+    "static/js/2.5febbe3e.chunk.js.LICENSE.txt": "/gold_pokedex/static/js/2.5febbe3e.chunk.js.LICENSE.txt",
     "static/media/App.css": "/gold_pokedex/static/media/pikachu_background.08ac7789.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a5d0921c.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6fb0fff3.chunk.js",
+    "static/js/2.5febbe3e.chunk.js",
     "static/css/main.4d844a19.chunk.css",
-    "static/js/main.33676b26.chunk.js"
+    "static/js/main.5de5f52d.chunk.js"
   ]
 }
